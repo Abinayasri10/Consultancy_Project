@@ -1,0 +1,53 @@
+.sales-analytics-page {
+  min-height: 80vh;
+  padding-bottom: 2rem;
+}
+
+.analytics-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.analytics-section h2 {
+  color: var(--dark-accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.performance-table {
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(--dark-accent);
+  color: var(--white);
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  border-bottom: 1px solid var(--light-gray);
+  align-items: center;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background-color: var(--primary-bg);
+}
+
+.table-cell {
+  color: var(--dark-gray);
+}

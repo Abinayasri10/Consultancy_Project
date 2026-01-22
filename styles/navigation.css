@@ -1,0 +1,133 @@
+/* NAVBAR BASE */
+.navbar {
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* CONTAINER */
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* LOGO */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--secondary-accent);
+  white-space: nowrap;
+}
+
+.logo-text {
+  color: var(--secondary-accent);
+}
+
+.logo-subtitle {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: green;
+  letter-spacing: 0.08em;
+}
+
+/* MENU */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* LINKS */
+.nav-link {
+  color: var(--dark-gray);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-accent);
+}
+
+/* BUTTONS */
+.nav-btn {
+  padding: 0.55rem 1.3rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ADMIN / LOGIN */
+.login-btn {
+  background: linear-gradient(135deg, #4ade80, #22c55e);
+  color: white;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.3);
+}
+
+/* LOGOUT */
+.logout-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}
+
+/* MOBILE */
+.menu-toggle {
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.6rem;
+    background: none;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-menu.active {
+    max-height: 400px;
+  }
+
+  .nav-link,
+  .nav-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}

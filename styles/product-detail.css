@@ -1,0 +1,264 @@
+.product-detail-page {
+  padding: 2rem 0;
+  min-height: 80vh;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary-accent);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-4px);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, rgba(87, 209, 49, 0.1) 0%, rgba(185, 233, 55, 0.1) 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--secondary-accent);
+  font-size: 1.2rem;
+  color: var(--medium-gray);
+}
+
+.detail-info h1 {
+  color: var(--dark-accent);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  color: var(--medium-gray);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-section h3 {
+  color: var(--dark-accent);
+  border-bottom: 2px solid var(--secondary-accent);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-grid > div label {
+  display: block;
+  color: var(--dark-gray);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-grid > div p {
+  color: var(--secondary-accent);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Dosage Calculator */
+.dosage-calculator {
+  background-color: var(--primary-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.dosage-calculator h2 {
+  color: var(--dark-accent);
+  margin-bottom: 1.5rem;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  color: var(--dark-gray);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group select,
+.form-group input {
+  padding: 0.75rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--white);
+}
+
+.calculator-result h3 {
+  color: var(--dark-accent);
+  margin-bottom: 1rem;
+}
+
+.result-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.result-card {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid var(--secondary-accent);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-card .label {
+  color: var(--medium-gray);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.result-card .value {
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Safety Section */
+.safety-section {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.safety-section h2 {
+  color: var(--dark-accent);
+  margin-bottom: 1.5rem;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.safety-card {
+  border: 1px solid var(--light-gray);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.safety-icon {
+  color: var(--secondary-accent);
+  margin-bottom: 1rem;
+}
+
+.safety-card h4 {
+  color: var(--dark-accent);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.safety-card p {
+  color: var(--medium-gray);
+  font-size: 0.95rem;
+}
+
+/* Pricing Section */
+.pricing-section {
+  background-color: var(--primary-bg);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.pricing-section h2 {
+  color: var(--dark-accent);
+  margin-bottom: 1.5rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.price-card {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid var(--secondary-accent);
+}
+
+.price-card h4 {
+  color: var(--dark-accent);
+  margin-bottom: 1rem;
+}
+
+.price-card .price {
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-info h1 {
+    font-size: 1.75rem;
+  }
+}

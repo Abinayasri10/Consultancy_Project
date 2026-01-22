@@ -1,0 +1,310 @@
+.recommendation-page {
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--secondary-accent) 0%, var(--dark-accent) 100%);
+  color: var(--white);
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.recommendation-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Input Panel */
+.input-panel {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.input-panel h2 {
+  color: var(--dark-accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-section label {
+  display: block;
+  color: var(--dark-gray);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-section select,
+.form-section input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--light-gray);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--primary-bg);
+}
+
+.form-section select:focus,
+.form-section input:focus {
+  border-color: var(--secondary-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(87, 209, 49, 0.1);
+}
+
+.season-display {
+  background-color: var(--primary-bg);
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: var(--secondary-accent);
+  font-weight: 600;
+  border: 1px solid var(--light-gray);
+}
+
+.symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.symptom-category h4 {
+  color: var(--dark-accent);
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+.symptom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.symptom-checkbox input {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.symptom-checkbox span {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
+.recommendation-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Output Panel */
+.output-panel {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.output-panel h2 {
+  color: var(--dark-accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.output-panel.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--medium-gray);
+}
+
+.empty-state svg {
+  color: var(--secondary-accent);
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.diagnosis-card {
+  background: linear-gradient(135deg, rgba(87, 209, 49, 0.1) 0%, rgba(185, 233, 55, 0.1) 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--secondary-accent);
+  margin-bottom: 1.5rem;
+}
+
+.diagnosis-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.diagnosis-header h3 {
+  color: var(--dark-accent);
+  margin: 0;
+}
+
+.confidence-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.confidence-score .label {
+  color: var(--medium-gray);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.confidence-score .score {
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.pest-name {
+  color: var(--dark-accent);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.confidence-bar {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-accent) 0%, var(--primary-accent) 100%);
+  transition: width 0.5s ease;
+}
+
+.recommendation-card {
+  background-color: var(--primary-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--light-gray);
+  margin-bottom: 1.5rem;
+}
+
+.recommendation-card h3 {
+  color: var(--dark-accent);
+  margin-bottom: 0.75rem;
+}
+
+.product-name {
+  color: var(--secondary-accent);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-details {
+  margin-bottom: 1rem;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.detail .label {
+  color: var(--medium-gray);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.detail .value {
+  color: var(--dark-accent);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.alternatives {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-accent);
+}
+
+.alternatives h3 {
+  color: var(--dark-accent);
+  margin-bottom: 0.5rem;
+}
+
+.alternatives > p {
+  color: var(--medium-gray);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.alt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.alt-item {
+  background-color: var(--primary-bg);
+  padding: 0.75rem;
+  border-radius: 6px;
+  color: var(--dark-gray);
+  font-weight: 500;
+  border-left: 3px solid var(--primary-accent);
+}
+
+@media (max-width: 768px) {
+  .recommendation-container {
+    grid-template-columns: 1fr;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .symptoms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-container {
+    padding: 0 1rem;
+  }
+}

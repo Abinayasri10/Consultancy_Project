@@ -1,0 +1,359 @@
+:root {
+  --bg-light: #F5F5F5;
+  --lime: #B9E937;
+  --brand-green: #2aa904;
+  --teal: #406661;
+  --white: #ffffff;
+  --black: #1a1a1a;
+}
+
+body {
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HERO SLIDER FIXES */
+.hero-carousel {
+  height: 90vh; 
+  position: relative;
+  z-index: 10;
+}
+
+.slide-inner {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-overlay {
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.slide-text h1 {
+  font-size: 4.5rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  line-height: 1.1;
+  color: #F5F5F5;
+}
+
+.badge {
+  background: var(--brand-green);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+/* Container for the 6-item Grid */
+
+.category-section-container {
+  margin-top: 80px; 
+  padding-bottom: 100px;
+  max-width: 1100px; /* Decreased width to create more space on the sides */
+  margin: 80px auto; /* Centered with top/bottom spacing */
+  padding: 0 40px;    /* Internal side padding */
+  z-index: 20;
+  /* Adds a smooth entrance effect */
+  animation: fadeInUp 1s ease-out;
+}
+
+
+.section-header {
+  text-align: center;
+  margin-bottom: 30px; /* Space between title and the grid */
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--teal);
+  margin: 10px 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Increased min-width for 3 per row */
+  gap: 30px;
+  padding: 50px 0;
+}
+
+.cat-card-modern {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  height: 400px; /* Force a fixed height for the card */
+}
+
+.cat-image-wrapper {
+  width: 100%;
+  height: 100%; /* Image fills the whole card */
+  position: relative;
+}
+
+.cat-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the photo isn't stretched */
+  display: block;
+}
+
+/* Static Bottom Bar (Before Hover) */
+.cat-info-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  transition: opacity 0.3s ease;
+}
+
+/* The Sliding Green Overlay */
+.cat-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, var(--teal) 10%, rgba(87, 209, 49, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  transform: translateY(100%); /* Start hidden below */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+/* Hover Action */
+.cat-card-modern:hover .cat-overlay {
+  transform: translateY(0); /* Slide Up */
+}
+
+.cat-card-modern:hover .cat-info-bottom {
+  opacity: 0; /* Hide the bottom bar so it doesn't clash with overlay */
+}
+
+.overlay-content h4 {
+  color: var(--lime);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.overlay-content p {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 1rem;
+}
+
+/* ABOUT MODERN */
+.about-modern {
+  padding: 100px 0;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about-images {
+  position: relative;
+}
+
+.img-main {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 20px 20px 0px var(--lime);
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background:rgb(134, 219, 7);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* SEASONAL ADVISORY (Innovative) */
+.seasonal-advisory {
+  padding: 60px 0;
+}
+
+.glass-card {
+  background: var(--white);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 50px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.text-green { color: var(--brand-green); }
+
+
+.btn-second {
+  background: var(--brand-green);
+  color: var(--white);
+  margin-top: 40px; /* This pushes the button down */
+  display: inline-flex; /* Ensures margin works correctly and aligns content */
+  align-items: center;
+  padding: 14px 32px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-second:hover {
+  background: rgb(4, 192, 70);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(64, 102, 97, 0.2);
+}
+
+.about-content p {
+  margin-bottom: 30px; 
+}
+
+/* BUTTONS */
+.hero-cta, .hero-buttons {
+  display: flex;  
+  gap: 20px;     
+  justify-content: center; 
+  flex-wrap: wrap;    
+  margin-top: 20px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--brand-green) !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important; 
+  font-weight: bold;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+ 
+  color: white !important;
+}
+
+/* 2. Change the Bottom Dots (Pagination) */
+.swiper-pagination-bullet {
+  background: white !important; /* Color of inactive dots */
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--brand-green) !important; /* Active dot color */
+  opacity: 1 !important;
+  width: 30px; /* Makes the active dot an oval/pill shape for a modern look */
+  border-radius: 6px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 35px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+  text-decoration: none; /* In case you use <a> tags */
+}
+
+.btn-success { 
+  background: var(--brand-green); 
+  color: white; 
+}
+.btn-mini{
+  background: rgb(62, 169, 4); 
+  height: 30px;
+  width: 150px;
+  color: white; 
+}
+
+.btn-success:hover { 
+  background: var(--lime); 
+  color: var(--teal);
+  transform: translateY(-3px); /* Adds a professional lift effect */
+  box-shadow: 0 10px 20px rgba(87, 209, 49, 0.3);
+}
+
+.btn-outline { 
+  border: 2px solid var(--white); 
+  color: var(--white); 
+  background: transparent; 
+}
+
+.btn-outline:hover {
+  background: var(--white);
+  color: var(--brand-green);
+}
+.btn-secondary-dark { background: var(--teal); color: white; }
+
+/* PARTNERS */
+.logo-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  filter: grayscale(1);
+  opacity: 0.6;
+  padding: 50px 0;
+}
+
+.logo-flex img { height: 40px; }
+
+@media (max-width: 768px) {
+  .about-wrapper { grid-template-columns: 1fr; }
+  .slide-text h1 { font-size: 2.5rem; }
+  .glass-card { flex-direction: column; text-align: center; gap: 20px; }
+}
