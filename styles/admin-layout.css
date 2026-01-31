@@ -1,0 +1,145 @@
+/* Unique prefix 'adm-' prevents conflict with your main Navbar */
+.adm-layout {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f4f2; /* Soft agro-grey/green background */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #2d3748;
+}
+
+/* --- SIDEBAR --- */
+.adm-sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #164228 0%, #1e5a35 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+
+.adm-sidebar.closed {
+  width: 85px;
+}
+
+.sidebar-header {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #7dd3c0; /* Mint accent */
+  text-transform: uppercase;
+}
+
+/* --- NAVIGATION LINKS --- */
+.adm-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 4px 12px;
+  border-radius: 10px;
+}
+
+.adm-nav-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.adm-nav-link.active {
+  background: #2aa904; /* Smart Agro Green */
+  color: white;
+  box-shadow: 0 4px 12px rgba(42, 169, 4, 0.3);
+}
+
+.adm-nav-link.active svg {
+  color: white;
+}
+
+/* --- SUBMENU --- */
+.adm-submenu {
+  margin-left: 35px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 0;
+}
+
+.adm-submenu-link {
+  display: block;
+  padding: 8px 20px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.adm-submenu-link:hover {
+  color: #7dd3c0;
+}
+
+/* --- MAIN CONTENT & TOPBAR --- */
+.adm-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.adm-topbar {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 0 30px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.adm-page-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a3c27;
+}
+
+.adm-content-area {
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #f8fafc;
+}
+
+/* --- LOGOUT BUTTON --- */
+.adm-logout-btn {
+  margin: 20px;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.adm-logout-btn:hover {
+  background: #ef4444;
+  color: white;
+}

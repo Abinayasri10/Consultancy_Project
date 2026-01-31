@@ -1,0 +1,257 @@
+.analytics-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e5a35;
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: #1e5a35;
+}
+
+.tab.active {
+  color: #1e5a35;
+  border-bottom-color: #1e5a35;
+}
+
+.tab-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+}
+
+.analysis-section h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e5a35;
+  margin: 0 0 25px 0;
+}
+
+.charts-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.chart-card {
+  background: #f9fbfd;
+  border: 1px solid #e8ecf1;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.chart-card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e5a35;
+  margin: 0 0 15px 0;
+}
+
+.single-chart {
+  display: flex;
+  justify-content: center;
+  background: #f9fbfd;
+  border: 1px solid #e8ecf1;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.category-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: #f9fbfd;
+  border: 1px solid #e8ecf1;
+  border-radius: 6px;
+}
+
+.stat-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.stat-label {
+  flex: 1;
+  font-size: 13px;
+  color: #666;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e5a35;
+}
+
+.products-table {
+  border: 1px solid #e8ecf1;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: #f5f7fa;
+  border-bottom: 2px solid #e8ecf1;
+  font-weight: 600;
+  color: #1e5a35;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid #e8ecf1;
+  transition: background 0.2s;
+}
+
+.table-row:hover {
+  background: #fafbfc;
+}
+
+.col-name,
+.col-stock,
+.col-price,
+.col-turnover {
+  padding: 15px 12px;
+  font-size: 13px;
+}
+
+.good {
+  color: #15803d;
+  font-weight: 600;
+}
+
+.warning {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.insight-card {
+  background: linear-gradient(135deg, #1e5a35 0%, #2d7a4f 100%);
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.insight-card h3 {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin: 0 0 10px 0;
+}
+
+.insight-card .value {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.insight-card .detail {
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.forecast-section {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #e8ecf1;
+}
+
+.forecast-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e5a35;
+  margin: 0 0 20px 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .tab-content {
+    padding: 20px;
+  }
+
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+
+  .insights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .col-price,
+  .col-turnover {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    overflow-x: auto;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
